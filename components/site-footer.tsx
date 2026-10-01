@@ -3,7 +3,7 @@ export function SiteFooter() {
     <footer className="site-footer full-footer">
       <div className="container full-footer-inner">
         <div className="full-footer-brand">
-          <a className="wordmark footer-brand" href="https://iamnigel.co">nigel jaure<span className="wordmark-dot">.</span></a>
+          <a className="wordmark footer-brand" href="/about">nigel jaure<span className="wordmark-dot">.</span></a>
           <p>Designing and building software.</p>
         </div>
         <nav className="full-footer-col" aria-label="Footer">

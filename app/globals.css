@@ -115,3 +115,16 @@ html{scroll-behavior:smooth}
 .now-role{margin:10px 0 8px;font-size:clamp(22px,3vw,28px);letter-spacing:-.03em}
 .now-role a:hover{color:var(--accent)}
 .now .supporting-copy{margin:0}
+
+.item-card.has-shots{grid-column:1/-1;padding-bottom:0;overflow:hidden}
+.item-card.has-shots>p{max-width:640px}
+.item-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.item-link{border:1px solid var(--line);border-radius:3px;padding:8px 13px;font:12px 'Courier New',monospace}
+.item-link:hover{border-color:var(--accent);color:var(--accent)}
+.shots{display:flex;gap:16px;margin:28px -24px 0;padding:4px 24px 28px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin}
+.shot{flex:0 0 auto;width:210px;margin:0;scroll-snap-align:start;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--line)}
+.shot img{display:block;width:100%;height:auto}
+.shot-dark{display:none!important}
+.dark .shot-light{display:none!important}.dark .shot-dark{display:block!important}
+@media (prefers-color-scheme:dark){:root:not(.light) .shot-light{display:none!important}:root:not(.light) .shot-dark{display:block!important}}
+@media (max-width:700px){.shot{width:170px}.shots{margin:24px -20px 0;padding:4px 20px 24px}}

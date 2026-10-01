@@ -16,7 +16,7 @@ export function Header({ nav = false }: { nav?: boolean }) {
     <header className="site-header">
       <div className="container nav-inner">
         {nav ? (
-          <a className="wordmark" href="https://iamnigel.co">nigel jaure<span className="wordmark-dot">.</span></a>
+          <a className="wordmark" href="/about">nigel jaure<span className="wordmark-dot">.</span></a>
         ) : (
           <a className="wordmark" href="/">tiny detour<span className="wordmark-dot">.</span></a>
         )}
