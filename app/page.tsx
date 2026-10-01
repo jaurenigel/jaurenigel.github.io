@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 const DESTINATION = 'https://iamnigel.co'
 const REDIRECT_DELAY = 4600
@@ -87,13 +88,7 @@ export default function Page() {
           <div className="hero-mark" aria-hidden="true"><span>09</span><span>⌁</span><span>26</span></div>
         </section>
       </main>
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <a className="wordmark small footer-brand" href={DESTINATION} aria-label="iamnigel.co">iamnigel<span className="wordmark-dot">.</span>co</a>
-          <span>no cookies. no nonsense.</span>
-          <span>destination: iamnigel.co</span>
-        </div>
-      </footer>
+      <Footer />
       <div className="leave-veil" aria-hidden="true" />
     </div>
   )

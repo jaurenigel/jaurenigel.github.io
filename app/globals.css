@@ -65,3 +65,53 @@ main{flex:1;position:relative;display:flex;align-items:center}
   .footer-inner{flex-direction:column;gap:10px;text-align:center}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.listing-main{align-items:flex-start}
+.listing{width:100%;padding-top:90px;padding-bottom:100px}
+.listing-title{margin:0 0 24px;font-weight:500;letter-spacing:-.05em;font-size:clamp(40px,6vw,72px);line-height:.98}
+.empty-state{margin-top:64px;padding:56px 32px;border:1px dashed var(--line);border-radius:3px;text-align:center}
+.empty-mark{color:var(--accent);margin:0 0 14px;font:32px 'Courier New',monospace}
+.empty-state h2{margin:0 0 8px;font-weight:500;font-size:22px;letter-spacing:-.02em}
+.empty-state p:last-child{margin:0;color:var(--muted);font-size:15px}
+.item-grid{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.item-card{border:1px solid var(--line);border-radius:3px;padding:24px}
+.item-card h2{margin:12px 0 8px;font-weight:500;font-size:22px;letter-spacing:-.02em}
+.item-card h2 a:hover{color:var(--accent)}
+.item-card p{margin:0;color:var(--muted);line-height:1.6;font-size:15px}
+.item-meta{display:flex;justify-content:space-between;color:var(--muted);font:11px 'Courier New',monospace;text-transform:uppercase;letter-spacing:1px}
+@media (max-width:700px){.listing{padding-top:60px;padding-bottom:70px}.empty-state{padding:40px 20px}}
+
+.site-nav{display:flex;gap:22px;font:12px 'Courier New',monospace}
+.site-nav a:hover{color:var(--accent)}
+.listing-stack{width:100%}
+.about{padding-top:60px;padding-bottom:100px;border-top:1px solid var(--line);max-width:1120px}
+.about-title{margin:0 0 18px;font-weight:500;letter-spacing:-.04em;font-size:clamp(32px,4vw,48px)}
+html{scroll-behavior:smooth}
+@media (max-width:700px){.site-nav{gap:14px}.about{padding-bottom:70px}}
+
+.full-footer{padding:56px 0 24px}
+.full-footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;font:13px 'Courier New',monospace}
+.full-footer-brand p{margin:14px 0 0;color:var(--muted);font:15px Arial,sans-serif}
+.full-footer-col{display:flex;flex-direction:column;gap:10px}
+.full-footer-col a:hover,.full-footer-base a:hover{color:var(--accent)}
+.footer-heading{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.full-footer-base{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font:11px 'Courier New',monospace}
+@media (max-width:700px){.full-footer-inner{grid-template-columns:1fr;gap:28px}.full-footer-base{flex-direction:column;text-align:center}}
+
+.about-lead{max-width:620px;font-size:19px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:56px 0 0;border:1px solid var(--line);border-radius:3px}
+.fact{padding:22px 24px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact dt{color:var(--muted);font:11px 'Courier New',monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.fact dd{margin:0;font-size:18px;letter-spacing:-.02em}
+.about-block{margin-top:56px}
+.chips{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:12px 'Courier New',monospace}
+.about-cta{padding-top:48px;border-top:1px solid var(--line)}
+.about-cta h2{margin:0 0 14px;font-weight:500;letter-spacing:-.04em;font-size:clamp(28px,4vw,40px)}
+@media (max-width:700px){.fact{border-right:0;border-bottom:1px solid var(--line)}.fact:last-child{border-bottom:0}}
+
+.now{padding-left:20px;border-left:2px solid var(--accent)}
+.now-role{margin:10px 0 8px;font-size:clamp(22px,3vw,28px);letter-spacing:-.03em}
+.now-role a:hover{color:var(--accent)}
+.now .supporting-copy{margin:0}
