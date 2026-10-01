@@ -5,42 +5,28 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Tiny Detour — one moment',
   description: 'A tiny, playful detour before you arrive at iamnigel.co.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#f7f6f2' },
+    { media: '(prefers-color-scheme: dark)', color: '#171715' },
   ],
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');if(t)document.documentElement.classList.add(t)}catch(e){}`,
+          }}
+        />
+      </head>
+      <body>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
