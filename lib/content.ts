@@ -14,6 +14,8 @@ export type Project = {
   href?: string
   links?: ProjectLink[]
   shots?: Shot[]
+  accent?: string // glow colour behind the screenshots
+  ratio?: string // screenshot width / height, e.g. '1080 / 2106'
 }
 
 const voucherShot = (name: string, alt: string): Shot => ({
@@ -36,6 +38,8 @@ export const projects: Project[] = [
       'Buy a voucher for any mobile number, top up Econet and NetOne airtime, buy ZESA tokens, or redeem a voucher straight to EcoCash, InnBucks or O’mari — on the web and on Android, with a light and dark theme.',
     year: '2026',
     tags: ['Web', 'Android', 'Payments'],
+    accent: '#3b82f6',
+    ratio: '1080 / 2106',
     links: [
       { label: 'Web app', href: 'https://voucher.contipay.co.zw/' },
       { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.contipay.contipayvoucher' },
@@ -54,6 +58,8 @@ export const projects: Project[] = [
       'The official Dynamos FC website plus iOS and Android apps — next match, upcoming fixtures, league tables and quick services in one place — with a WhatsApp bot that lets supporters buy airtime from chat.',
     year: '2026',
     tags: ['Web', 'iOS', 'Android', 'WhatsApp'],
+    accent: '#4f6bff',
+    ratio: '924 / 2000',
     links: [
       { label: 'Website', href: 'https://dynamosfc.africa/' },
       { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.contipay.dynamosfc' },
@@ -73,6 +79,8 @@ export const projects: Project[] = [
     summary: 'The ContiPay voucher system for agents. Agents run their counter from one app: top up float, sell ContiPay vouchers, ZESA tokens and Econet or NetOne airtime, and follow every sale in statements and the ledger.',
     year: 'Live',
     tags: ['iOS', 'Android', 'Payments'],
+    accent: '#8b5cf6',
+    ratio: '1080 / 2106',
     links: [
       { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.contipay.contipay_voucher_system' },
       { label: 'App Store', href: 'https://apps.apple.com/zw/app/contipay-agent/id6443781008' },
